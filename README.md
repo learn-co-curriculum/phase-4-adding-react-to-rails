@@ -122,8 +122,8 @@ Procfile in development as well, we'll simplify the deploying process later.
 In the root directory, create a file `Procfile.dev` and add this code:
 
 ```txt
-web: npm start --prefix client
-api: rails s
+web: PORT=4000 npm start --prefix client
+api: PORT=3000 rails s
 ```
 
 Then, run it with Foreman:
