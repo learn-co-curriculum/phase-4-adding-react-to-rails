@@ -32,7 +32,7 @@ This will create a new React application in a `client` folder, and will use npm
 instead of yarn to manage our dependencies.
 
 When we're running React and Rails in development, we'll need two separate
-servers running on different ports &mdash; we'll run React on port 4000, and
+servers running on different ports — we'll run React on port 4000, and
 Rails on port 3000. Whenever we want to make a request to our Rails API from
 React, we'll need to make sure that our requests are going to port 3000.
 
@@ -46,7 +46,7 @@ fetch("/movies");
 ```
 
 To set up this proxy feature, open the `package.json` file in the `client`
-directory and add this line:
+directory and add this line at the top level of the JSON object:
 
 ```json
 "proxy": "http://localhost:3000"
@@ -114,10 +114,10 @@ To facilitate this, we'll use the excellent [foreman][] gem. Install it:
 gem install foreman
 ```
 
-Foreman works with a special kind of file known as a Procfile &mdash; a special
-file that lists different processes to run for our application. Some hosting
-services, such as Heroku, use a Procfile to run applications, so by using a
-Procfile in development as well, we'll simplify the deploying process later.
+Foreman works with a special kind of file known as a Procfile, which lists
+different processes to run for our application. Some hosting services, such as
+Heroku, use a Procfile to run applications, so by using a Procfile in
+development as well, we'll simplify the deploying process later.
 
 In the root directory, create a file `Procfile.dev` and add this code:
 
@@ -137,7 +137,7 @@ now we can run both with one command!
 
 **There is one big caveat to this approach**: by running our client and server
 in the same terminal, it can be more challenging to read through the server logs
-and debug our code. `byebug` will also not work. If you're doing a lot of
+and debug our code. Furthermore, `byebug` will not work. If you're doing a lot of
 debugging in the terminal, you should run the client and server separately to
 get a cleaner terminal output and allow terminal-based debugging with `byebug`.
 
