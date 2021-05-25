@@ -141,6 +141,17 @@ and debug our code. Furthermore, `byebug` will not work. If you're doing a lot o
 debugging in the terminal, you should run the client and server separately to
 get a cleaner terminal output and allow terminal-based debugging with `byebug`.
 
+You can run each application separately by opening two terminal windows and
+running each of these commands in a separate window:
+
+```sh
+npm start --prefix client
+rails s
+```
+
+This will run React on port 4000 (thanks to the configuration in the
+`client/package.json` file), and Rails on port 3000 (the default port).
+
 ## Conclusion
 
 In the past couple lessons, we've seen how to put together the two pieces we'll
