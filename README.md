@@ -83,7 +83,7 @@ working by visiting:
 We can also see how to make a request using `fetch`. In the React application,
 update your `App.js` file with the following code:
 
-```js
+```jsx
 import { useEffect } from "react";
 
 function App() {
